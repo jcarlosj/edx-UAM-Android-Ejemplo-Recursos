@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
     private Button button,
                    button2;
 
+    private String textos[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         button2 = ( Button ) findViewById( R .id .button2 );
 
         //-> Asignamos las cadenas de texto a los botones extrayendolas del fichero "strings.xml"
-        button .setText(getResources().getString(R.string.label_grande));
-        button2 .setText( getResources() .getString( R .string .label_reducido ) );
+        textos = getResources() .getStringArray( R .array .textoBotones );
+        button .setText( textos[ 0 ] );
+        button2 .setText( textos[ 1 ] );
 
         //-> Asignamos un tamaño (dimensión) a las cadenas de los botones en el fichero "dimens.xml"
         button .setTextSize( getResources() .getDimension( R .dimen .tipo_grande ) );
