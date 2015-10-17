@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Recursos del sistema</string>
+    <string name="label_grande">Grande en verde</string>
+    <string name="label_reducido">Reducido en rojo</string>
 </resources>
